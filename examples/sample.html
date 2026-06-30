@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例登录页</title>
+</head>
+<body>
+    <header>
+        <h1>示例登录页</h1>
+        <nav aria-label="主导航">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="login-form" aria-label="登录表单">
+            <h2>用户登录</h2>
+
+            <div>
+                <label for="username">用户名</label>
+                <input id="username" name="username" type="text" placeholder="请输入用户名">
+            </div>
+
+            <div>
+                <label for="password">密码</label>
+                <input id="password" name="password" type="password" placeholder="请输入密码">
+            </div>
+
+            <div>
+                <label>
+                    <input id="remember" name="remember" type="checkbox">
+                    记住我
+                </label>
+            </div>
+
+            <div>
+                <label for="city">城市</label>
+                <select id="city" name="city">
+                    <option value="">请选择</option>
+                    <option value="beijing">北京</option>
+                    <option value="shanghai">上海</option>
+                    <option value="guangzhou">广州</option>
+                </select>
+            </div>
+
+            <button type="submit">登录</button>
+            <button type="button" id="alert-btn" onclick="alert('你好')">显示弹窗</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 示例登录页</p>
+    </footer>
+
+    <script>
+        // 阻止表单默认提交，便于演示中停留当前页面
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
